@@ -7,10 +7,11 @@ import { Toaster } from "@/components/ui/toaster"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Slime Stain Removal Guide - Remove Slime in 3 Easy Steps",
+  title: "How to Get Slime Out of Clothes - 7 Easy Methods for Fabric Stains",
   description:
-    "7 proven home recipes to remove slime stains from any fabric. Quick 3-step process for cotton, wool, carpet, and more.",
-    generator: 'v0.dev'
+    "Learn how to get slime out of clothes with 7 proven home recipes. Remove slime stains from cotton, wool, carpet and more in 3 simple steps.",
+    generator: 'v0.dev',
+    keywords: "slime removal, how to get slime out of clothes, remove slime stains, slime stain removal, fabric stain removal",
 }
 
 export default function RootLayout({
