@@ -111,7 +111,11 @@ export default function SlimeRemovalGuide() {
   const scrollToRecipe = (id: string) => {
     const element = document.getElementById(id)
     if (element) {
-      const headerOffset = 120 // Account for sticky header height
+      // 获取快速启动栏的实际高度
+      const quickStartBar = document.getElementById("quick-start")
+      // 增加额外的偏移量确保元素完全可见
+      const headerOffset = quickStartBar ? quickStartBar.offsetHeight + 20 : 90 // 默认偏移量为90px
+      
       const elementPosition = element.getBoundingClientRect().top
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset
 
@@ -124,7 +128,6 @@ export default function SlimeRemovalGuide() {
 
   const copySteps = (recipe: (typeof recipes)[0]) => {
     const text = `${recipe.name} - Slime Removal Steps:\n\n${recipe.steps.map((step, i) => `${i + 1}. ${step}`).join("\n")}\n\nIngredients needed: ${recipe.ingredients.map((ing) => ing.name).join(", ")}`
-
     navigator.clipboard.writeText(text).then(() => {
       toast({
         title: "Copied!",
