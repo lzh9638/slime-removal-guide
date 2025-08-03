@@ -139,6 +139,23 @@ export default function SlimeRemovalGuide() {
 
   return (
     <>
+      {/* Google Analytics */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-RBS6NPWR1V"
+        strategy="afterInteractive"
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+      >
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RBS6NPWR1V');
+        `}
+      </Script>
+      
       <Script
         id="structured-data"
         type="application/ld+json"
