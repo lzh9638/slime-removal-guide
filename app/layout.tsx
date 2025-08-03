@@ -22,6 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+        <link rel="icon" href="/icon.png" />
       </head>
       <body className={inter.className}>
         {children}
