@@ -226,26 +226,26 @@ export default function SlimeRemovalGuide() {
         </section>
 
         {/* Quick Start Bar */}
-        <section id="quick-start" className="py-12 bg-white shadow-sm sticky top-0 z-10">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-2xl font-bold text-center mb-8 text-gray-900">Choose Your Situation</h2>
-            <div className="flex flex-wrap justify-center gap-4">
+        <section id="quick-start" className="py-4 md:py-12 bg-white shadow-sm sticky top-0 z-10">
+          <div className="max-w-6xl mx-auto px-2 md:px-4">
+            <h2 className="text-lg md:text-2xl font-bold text-center mb-2 md:mb-8 text-gray-900">Choose Your Situation</h2>
+            <div className="flex flex-wrap justify-center gap-1 md:gap-4">
               {recipes.map((recipe) => {
                 const IconComponent = recipe.icon
                 return (
                   <button
                     key={recipe.id}
                     onClick={() => scrollToRecipe(recipe.id)}
-                    className="flex flex-col items-center p-4 rounded-full hover:scale-110 transition-transform duration-200 group"
+                    className="flex flex-col items-center p-1.5 md:p-4 rounded-full hover:scale-110 transition-transform duration-200 group"
                     style={{ backgroundColor: recipe.color + "20" }}
                   >
                     <div
-                      className="w-16 h-16 rounded-full flex items-center justify-center mb-2 shadow-lg group-hover:shadow-xl transition-shadow"
+                      className="w-8 h-8 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-1 md:mb-2 shadow-lg group-hover:shadow-xl transition-shadow"
                       style={{ backgroundColor: recipe.color }}
                     >
-                      <IconComponent className="w-8 h-8 text-white" />
+                      <IconComponent className="w-3.5 h-3.5 md:w-8 md:h-8 text-white" />
                     </div>
-                    <span className="text-sm font-medium text-gray-700 text-center max-w-20">{recipe.name}</span>
+                    <span className="text-[0.6rem] md:text-sm font-medium text-gray-700 text-center max-w-14 md:max-w-20">{recipe.name}</span>
                   </button>
                 )
               })}
