@@ -111,10 +111,8 @@ export default function SlimeRemovalGuide() {
   const scrollToRecipe = (id: string) => {
     const element = document.getElementById(id)
     if (element) {
-      // 获取快速启动栏的实际高度
-      const quickStartBar = document.getElementById("quick-start")
-      // 增加额外的偏移量确保元素完全可见
-      const headerOffset = quickStartBar ? quickStartBar.offsetHeight + 20 : 90 // 默认偏移量为90px
+      // 固定偏移量，避免元素贴顶（不再有吸顶区域）
+      const headerOffset = 20
       
       const elementPosition = element.getBoundingClientRect().top
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset
@@ -243,7 +241,7 @@ export default function SlimeRemovalGuide() {
         </section>
 
         {/* Quick Start Bar */}
-        <section id="quick-start" className="py-4 md:py-12 bg-white shadow-sm sticky top-0 z-10">
+        <section id="quick-start" className="py-4 md:py-12 bg-white shadow-sm">
           <div className="max-w-6xl mx-auto px-2 md:px-4">
             <h2 className="text-lg md:text-2xl font-bold text-center mb-2 md:mb-8 text-gray-900">Choose Your Situation</h2>
             <div className="flex flex-wrap justify-center gap-1 md:gap-4">
